@@ -1,0 +1,42 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+}
+.titlegreen {
+    color: #126f38;
+}
+.padrao {
+    color: #aaafa9;
+}
+h4{
+  color: #64c832;
+}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      <div class="titlegreen">Vagas Disponiveis</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="estacionamentolista">
+    <form id="page-estacionamentolista">
+      <h4>Lista das vagas: </h4>
+      <ion-list>
+        <ion-item *ngFor="let item of items" class="padrao">
+          <ion-icon name="" item-start><img src="assets/img/casa.png" width="40px" height="40px"/></ion-icon>
+          <ion-icon name="ios-arrow-forward" item-end (click)="gravar(item.id)"></ion-icon>
+            <h2>Vaga disponivel: {{ item.vaga }}</h2>
+            <h3>Primeiro dia: {{ item.dataini | date:'dd/MM/yyyy'}}</h3>
+            <h3>Ultimo dia: {{ item.datafim | date:'dd/MM/yyyy'}}</h3>
+        </ion-item>
+      </ion-list>
+</form>
+
+</ion-content>

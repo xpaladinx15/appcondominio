@@ -1,0 +1,54 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+  color: black;
+}
+input, select {
+    width:100%;
+    height: 35px;
+}
+.titlegreen {
+    color: #126f38;
+}
+.titlegreen2 {
+    color: #64c832;
+}
+h4{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 25px;
+  background-color: #64c832;
+}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      <div class="titlegreen">Liberar vaga</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="estacionamentocadastro">
+
+<h4>
+ &nbsp;&nbsp;&nbsp;&nbsp;{{ viewTitle }}</h4>
+
+<calendar [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        [autoSelect]="false"
+        (onEventSelected)="onEventSelected($event)"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        (onTimeSelected)="onTimeSelected($event)"
+        step="30"
+        class="calendarioo">
+      </calendar>
+
+
+</ion-content>

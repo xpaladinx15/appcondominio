@@ -1,0 +1,156 @@
+<style>
+.getstart {
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+}
+.espa {
+   margin-top:5px;
+   margin-bottom:5px
+}
+ion-item-sliding{
+   margin-bottom:-10px
+}
+.titlegreen {
+    color: #126f38;
+}
+.padrao {
+    color: #aaafa9;
+}
+h4{
+  color: #64c832;
+}
+</style>
+
+<ion-header >
+  <ion-navbar color="secondary">
+    <ion-title>
+      <div class="titlegreen">Chamados</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="getstart">
+<br>
+<h4>Condomínio</h4>
+<br>
+<ion-list>
+  <ion-item-sliding>
+  <ion-item class="padrao" text-wrap>
+    <ion-avatar item-start (click)="setAr()">
+            <img src="assets/img/ar.png">
+          </ion-avatar>
+    <ion-icon name="ios-arrow-forward" item-end (click)="setAr()"></ion-icon>
+    <h2>Climatização</h2>
+
+  </ion-item>
+  <ion-item-options side="right">
+    <button ion-button color="primary" (click)="presentToast()">
+      <ion-icon name="md-help-circle"></ion-icon>
+      Duvida
+    </button>
+       <button ion-button color="secondary" (click)="setAr()">
+         <ion-icon name="md-add-circle"></ion-icon>
+         Abrir
+       </button>
+     </ion-item-options>
+  </ion-item-sliding>
+  <br>
+
+
+
+
+
+<ion-item-sliding>
+<ion-item class="padrao" text-wrap>
+  <ion-avatar item-start (click)="setEletrica()">
+          <img src="assets/img/luz.png">
+        </ion-avatar>
+  <ion-icon name="ios-arrow-forward" item-end (click)="setEletrica()"></ion-icon>
+  <h2>Elétrica</h2>
+</ion-item>
+<ion-item-options side="right">
+  <button ion-button color="primary" (click)="presentToastEletrica()">
+    <ion-icon name="md-help-circle"></ion-icon>
+    Duvida
+  </button>
+     <button ion-button color="secondary" (click)="setEletrica()">
+       <ion-icon name="md-add-circle"></ion-icon>
+       Abrir
+     </button>
+   </ion-item-options>
+</ion-item-sliding>
+<br>
+
+<ion-item-sliding>
+<ion-item class="padrao" text-wrap>
+  <ion-avatar item-start (click)="setLogica()">
+          <img src="assets/img/wifi.png">
+        </ion-avatar>
+  <ion-icon name="ios-arrow-forward" item-end (click)="setLogica()"></ion-icon>
+  <h2>Lógica</h2>
+
+</ion-item>
+<ion-item-options side="right">
+  <button ion-button color="primary" (click)="presentToastLogica()">
+    <ion-icon name="md-help-circle"></ion-icon>
+    Duvida
+  </button>
+     <button ion-button color="secondary" (click)="setLogica()">
+       <ion-icon name="md-add-circle"></ion-icon>
+       Abrir
+     </button>
+   </ion-item-options>
+</ion-item-sliding>
+<br>
+
+
+
+<ion-item-sliding>
+<ion-item class="padrao" text-wrap>
+  <ion-avatar item-start (click)="setLayout()">
+          <img src="assets/img/layout.png">
+        </ion-avatar>
+  <ion-icon name="ios-arrow-forward" item-end (click)="setLayout()"></ion-icon>
+  <h2>Mudança de layout</h2>
+
+</ion-item>
+<ion-item-options side="right">
+  <button ion-button color="primary" (click)="presentToastMudancas()">
+    <ion-icon name="md-help-circle"></ion-icon>
+    Duvida
+  </button>
+     <button ion-button color="secondary" (click)="setLayout()">
+       <ion-icon name="md-add-circle"></ion-icon>
+       Abrir
+     </button>
+   </ion-item-options>
+</ion-item-sliding>
+<br>
+<ion-item-sliding>
+<ion-item class="padrao" text-wrap>
+  <ion-avatar item-start (click)="setGeral()">
+          <img src="assets/img/fenda.png">
+        </ion-avatar>
+  <ion-icon name="ios-arrow-forward" item-end (click)="setGeral()"></ion-icon>
+  <h2>Manutenção geral</h2>
+
+</ion-item>
+<ion-item-options side="right">
+  <button ion-button color="primary" (click)="presentToastGeral()">
+    <ion-icon name="md-help-circle"></ion-icon>
+    Duvida
+  </button>
+     <button ion-button color="secondary" (click)="setGeral()">
+       <ion-icon name="md-add-circle"></ion-icon>
+       Abrir
+     </button>
+   </ion-item-options>
+</ion-item-sliding>
+
+</ion-list>
+
+
+</ion-content>

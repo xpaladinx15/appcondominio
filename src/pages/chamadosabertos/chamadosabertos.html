@@ -1,0 +1,35 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Chamados Abertos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="page5">
+    <form id="page-form5">
+<h1>{{teste}}</h1>
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    <ion-avatar item-start>
+      <img src="assets/img/war.png">
+    </ion-avatar>
+    <h2>{{ item.incidente }} </h2>
+
+    <h2>{{ item.resumo }} </h2>
+    <h2>{{ item.desc }} </h2>
+    <button ion-button color="secondary"  (click)="alert(item.cr)">Visualizar os comentários</button>
+  </ion-item>
+</ion-list>
+
+
+</form>
+
+</ion-content>

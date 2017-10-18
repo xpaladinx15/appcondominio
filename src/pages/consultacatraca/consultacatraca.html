@@ -1,0 +1,40 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+}
+.titlegreen {
+    color: #126f38;
+}
+.padrao {
+    color: #aaafa9;
+}
+h4{
+  color: #64c832;
+}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      <div class="titlegreen">Catraca</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="page4">
+
+<img src="assets/img/mapa-CAS-D.png" style="display:block;width:80%;height:auto;margin-left:auto;margin-right:auto;" />
+<br>
+<h4>Consulta Catraca</h4>
+<br>
+  <ion-item *ngFor="let item of items3 | slice:0:1;" class="padrao">
+      <h2>{{ item.incidente }} </h2>
+     </ion-item>
+     <ion-item *ngFor="let item of items3"  class="padrao">
+         <h2>{{ item.resumo }} </h2>
+        </ion-item>
+</ion-content>

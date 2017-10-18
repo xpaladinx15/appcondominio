@@ -1,0 +1,29 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Comentários
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="page6">
+    <form id="page-form5">
+
+<ion-list>
+  <ion-item *ngFor="let item of items" text-wrap>
+    <h2>{{ item.horario }} </h2>
+    <h2>{{ item.comentario }} </h2>
+  </ion-item>
+</ion-list>
+
+
+</form>
+
+</ion-content>

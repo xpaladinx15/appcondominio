@@ -1,0 +1,72 @@
+<style>
+body, html {
+    height: 100%;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url('assets/font/Exo2-BoldItalic.otf');
+}
+
+.bg {
+    /* The image used */
+    background-image: url("assets/img/login.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btgreen{
+  color: white;
+  background-color: #126f38;
+font-family: myFirstFont;
+}
+
+
+
+.nomeapp{
+  color: white;
+  font-size: 50px;
+font-family: myFirstFont;
+}
+
+</style>
+
+
+<ion-content padding id="page1" class="bg">
+  <br>
+  <br>
+
+  <div class="nomeapp" style="display:block;text-align: center;">APLICATIVO DO CAS</div>
+
+  <br><br>
+  <br>
+  <form id="page-form2">
+
+    <ion-item id="page-input2">
+      <ion-label><img src="assets/img/usuario.png"/></ion-label>
+      <ion-input [(ngModel)]="ldap" [value]="ldap" type="text" placeholder="Usuário" name="ldap" id="ldap"></ion-input>
+    </ion-item>
+    <br>
+    <ion-item id="page-input3">
+      <ion-label>
+      <img src="assets/img/senha.png"/>
+      </ion-label>
+      <ion-input [(ngModel)]="senha" [value]="senha" type="password" placeholder="Senha" name="senha" id="senha"></ion-input>
+    </ion-item>
+
+
+  </form>
+<br><br>
+<br>
+  <button id="page-button2" ion-button class="btgreen" block on-click="setData(ldap.value, senha.value)">
+    Entrar
+  </button>
+
+
+
+
+</ion-content>

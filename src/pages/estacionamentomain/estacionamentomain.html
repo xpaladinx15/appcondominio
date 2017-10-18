@@ -1,0 +1,72 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+}
+.titlegreen {
+    color: #126f38;
+}
+.padrao {
+    color: #aaafa9;
+}
+h4{
+  color: #64c832;
+}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      <div class="titlegreen">
+      Estacionamento</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="page6">
+
+  <br>
+    <form id="page-form5">
+            <ion-item class="padrao" >
+              <ion-icon name="" item-start (click)="liberavaga()"><img src="assets/img/abrirchamado.png"/></ion-icon>
+              <ion-icon name="ios-arrow-forward" item-end (click)="liberavaga()"></ion-icon>
+              <h2>LIBERAR VAGA</h2>
+            </ion-item>
+            <br>
+            <ion-item class="padrao" >
+                <ion-icon name="" item-start (click)="listavagasabertas()"><img src="assets/img/lupa.png"/></ion-icon>
+              <ion-icon name="ios-arrow-forward" item-end (click)="listavagasabertas()"></ion-icon>
+              <h2>VAGAS DISPONIVEIS</h2>
+            </ion-item>
+            <br>
+            <ion-item class="padrao" >
+                <ion-icon name="" item-start (click)="vagasreservadas()"><img src="assets/img/lista.png"/></ion-icon>
+              <ion-icon name="ios-arrow-forward" item-end (click)="vagasreservadas()"></ion-icon>
+              <h2>VAGAS RESERVADAS</h2>
+            </ion-item>
+            <br>
+            <ion-item class="padrao" >
+                <ion-icon name="" item-start (click)="cadastrarcarro()"><img src="assets/img/carro.png" width="30px" height="42px"/></ion-icon>
+              <ion-icon name="ios-arrow-forward" item-end (click)="cadastrarcarro()"></ion-icon>
+              <h2>CADASTRAR CARRO</h2>
+            </ion-item>
+            <br>
+            <ion-item class="padrao" >
+              <ion-icon name="" item-start (click)="mapavagas()"><img src="assets/img/mapa.png" width="30px" height="42px"/></ion-icon>
+              <ion-icon name="ios-arrow-forward" item-end (click)="mapavagas()"></ion-icon>
+              <h2>MAPA DAS VAGAS</h2>
+            </ion-item>
+<h4>Meus carros cadastrados:</h4>
+<ion-list>
+  <ion-item *ngFor="let item of items" class="padrao">
+  <ion-icon name="" item-start><img src="assets/img/carro.png" width="30px" height="42px"/></ion-icon>
+      <h2>{{ item.MARCA_VEICULO }} - {{ item.MODELO_VEICULO }}</h2>
+      <h3>{{ item.COR_VEICULO }} - Placa: {{ item.PLACAS_VEICULO }}</h3>
+  </ion-item>
+</ion-list>
+</form>
+
+</ion-content>

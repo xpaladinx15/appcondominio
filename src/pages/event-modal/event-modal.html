@@ -1,0 +1,52 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+  color: black;
+}
+input, select {
+    width:100%;
+    height: 35px;
+}
+.titlegreen {
+    color: #126f38;
+}
+.btgreen{
+  color: white;
+  background-color: #64c832;
+}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-buttons start>
+      <button ion-button icon-only (click)="cancel()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title><div class="titlegreen">Detalhes:</div></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Data selecionada:</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate" monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez' disabled="true"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Todo o dia?</ion-label>
+      <ion-checkbox checked="True" [(ngModel)]="event.allDay" disabled="true"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full icon-left class="btgreen" (click)="save()">
+  Salvar
+  </button>
+</ion-content>

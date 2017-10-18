@@ -1,0 +1,140 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back1.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+
+.img-circle {
+    border-radius: 100%;
+}
+.circular--portrait {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left:15px;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+.corbg {
+  background-color: #C5E0B4;
+}
+.corbg1 {
+  background-color: #64c832;
+  color: white;
+
+}
+.titlegreen {
+    color: #126f38;
+}
+.padrao {
+    color: #aaafa9;
+}
+</style>
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle icon-only>
+          <ion-icon name="" item-start><img src="assets/img/menu.png"/></ion-icon>
+        </button>
+    <ion-title >
+      <div class="titlegreen">CAS - Sicredi</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-menu [content]="content" type="overlay">
+
+  <ion-content class="getstart1">
+    <ion-list>
+      <ion-item class="corbg1">
+          <ion-icon name="" class="circular--portrait" item-start>  <img [src]="image" alt=""></ion-icon>
+
+        <font size="2">{{nome}}</font><br>
+        <font size="2">{{ldap}}@sicredi.com.br</font>
+      </ion-item>
+      <ion-item (click)="abrirchamado()">
+          <ion-icon name="" item-start><img src="assets/img/abrirchamado.png" width="18px" height="18px"/></ion-icon>
+          <p>Abrir chamado</p>
+      </ion-item>
+      <ion-item (click)="abrirconsulta()">
+      <ion-icon name="" item-start><img src="assets/img/catraca.png" width="18px" height="18px"/></ion-icon>
+          <p>Consulta catraca</p>
+      </ion-item>
+      <ion-item (click)="estacionamento()">
+        <ion-icon name="" item-start><img src="assets/img/carro.png" width="24px" height="27px"/></ion-icon>
+          <p>Estacionamento</p>
+      </ion-item>
+      <ion-item (click)="pedidocopa()">
+        <ion-icon name="" item-start><img src="assets/img/copa.png" width="22px" height="22px"/></ion-icon>
+          <p>Pedido copa</p>
+      </ion-item>
+      <ion-item (click)="logout()">
+          <ion-icon name="" item-start><img src="assets/img/logout.png" width="24px" height="24px"/></ion-icon>
+          <p>Logout</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<ion-content padding class="getstart" id="page3">
+  <ion-list>
+    <br>
+    <br>
+    <br>
+    <img src="assets/img/sptWrgxoTDmG9mjUamxO_logo_novo.png" style="display:block;width:65%;height:auto;margin-left:auto;margin-right:auto;" />
+    <br>
+    <br>
+    <br>
+      <ion-item class="padrao" text-wrap>
+        <ion-icon name="" item-start (click)="abrirchamado()"><img src="assets/img/abrirchamado.png" width="30px" height="28px"/></ion-icon>
+        <ion-icon name="ios-arrow-forward" item-end (click)="abrirchamado()"></ion-icon>
+        <h2>ABERTURA DE CHAMADOS</h2>
+        <p>Chamados para manutenção</p>
+      </ion-item>
+
+    <br>
+
+      <ion-item *ngFor="let item of items3 | slice:0:1;" class="padrao"  text-wrap>
+          <ion-icon name="" item-start (click)="abrirconsulta()"><img src="assets/img/catraca.png"/></ion-icon>
+        <ion-icon name="ios-arrow-forward" item-end (click)="abrirconsulta()"></ion-icon>
+        <h2>CONSULTA CATRACA</h2>
+        <p>{{ item.incidente }}</p>
+      </ion-item>
+
+    <br>
+
+
+      <ion-item *ngFor="let item of itemsestacionamento | slice:0:1;" class="padrao" text-wrap>
+        <ion-icon name="" item-start (click)="estacionamento()"><img src="assets/img/carro.png" width="30px" height="42px"/></ion-icon>
+          <ion-icon name="ios-arrow-forward" item-end (click)="estacionamento()"></ion-icon>
+        <h2>ESTACIONAMENTO</h2>
+        <p>Vagas reservadas: {{contareservas}}</p>
+        <p>Numero da sua vaga: {{item.NUMERO_VAGA}}</p>
+      </ion-item>
+
+<br>
+
+
+<ion-item class="padrao" text-wrap>
+    <ion-icon name="" item-start (click)="pedidocopa()"><img src="assets/img/copa.png" width="30px" height="33px"/></ion-icon>
+    <ion-icon name="ios-arrow-forward" item-end (click)="pedidocopa()"></ion-icon>
+  <h2>PEDIDO PARA A COPA</h2>
+  <p>Está em reunião? Peça um café!</p>
+</ion-item>
+
+  </ion-list>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
+</ion-content>

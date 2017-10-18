@@ -1,0 +1,57 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+  color: black;
+}
+.titlegreen {
+    color: #126f38;
+}
+.btgreen{
+  color: white;
+  background-color: #64c832;
+}
+.labelgreen{
+  color: #64c832;
+}
+</style>
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title><div class="titlegreen">Cadastro de carros</div></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+    <ion-item>
+      <ion-label class="labelgreen" stacked><h2>Marca:</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="marca"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label class="labelgreen" stacked><h2>Modelo:</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="modelo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="labelgreen" stacked><h2>Cor:</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="cor"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="labelgreen" stacked><h2>Placa:</h2></ion-label>
+      <ion-input type="text" [(ngModel)]="placa"></ion-input>
+    </ion-item>
+<br>
+<button ion-button full icon-left class="btgreen" (click)="save(marca.value, modelo.value, cor.value, placa.value)">
+  <ion-icon name="checkmark"></ion-icon> Salvar
+</button>
+</ion-content>

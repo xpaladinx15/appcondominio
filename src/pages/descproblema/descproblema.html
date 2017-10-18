@@ -1,0 +1,90 @@
+<style>
+.getstart {
+
+background-image: url('assets/img/back.png');
+// background: url('../../img/getstart.png');
+background-repeat: no-repeat;
+## Heading}
+.corbg {
+  background-color: #C5E0B4;
+  color: black;
+}
+.titlegreen {
+    color: #126f38;
+}
+.btgreen{
+  color: white;
+  background-color: #64c832;
+}
+.btgreen{
+  color: white;
+  background-color: #126f38;
+}
+.labelgreen{
+  color: #64c832;
+}
+</style>
+
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      <div class="titlegreen">Chamados</div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart" id="page2">
+
+
+  <form id="page-form2">
+
+
+      <ion-item>
+    <ion-label class="labelgreen" stacked><h2>Descreva seu problema:</h2></ion-label>
+    <ion-input [(ngModel)]="desc" [value]="desc" type="text" placeholder="descrição do problema" name="desc" id="desc"></ion-input>
+
+  </ion-item>
+<ion-item>
+  <ion-label class="labelgreen" stacked><h2>Local:</h2></ion-label>
+  <ion-select [(ngModel)]="cafe" okText="Ok" cancelText="Cancela" name="cafe" id="cafe">
+    <ion-option value="TORRE C">TORRE C</ion-option>
+    <ion-option value="TORRE D">TORRE D</ion-option>
+    <ion-option value="DIGITAL">DIGITAL</ion-option>
+    <ion-option value="CAS CENTRO">CAS CENTRO</ion-option>
+  </ion-select>
+</ion-item>
+
+<ion-item>
+<ion-label class="labelgreen" stacked><h2>Área:</h2></ion-label>
+<ion-input [(ngModel)]="area" [value]="area" type="text" placeholder="area" name="area" id="area"></ion-input>
+</ion-item>
+
+<ion-item>
+<ion-label class="labelgreen" stacked><h2>Andar:</h2></ion-label>
+<ion-input [(ngModel)]="andar" [value]="andar" type="text" placeholder="andar" name="andar" id="andar"></ion-input>
+</ion-item>
+
+<ion-item>
+<ion-label class="labelgreen" stacked><h2>Ramal:</h2></ion-label>
+<ion-input [(ngModel)]="ramal" [value]="ramal" type="text" placeholder="ramal" name="ramal" id="ramal"></ion-input>
+</ion-item>
+<br>
+
+
+<button ion-button full icon-left class="btgreen2" (click)="takePicture()">
+Tirar foto
+</button>
+
+<br>
+
+<button ion-button full icon-left class="btgreen" (click)="usuario(desc.value, cafe.value, area.value, andar.value, ramal.value)">
+Salvar
+</button>
+
+
+
+
+<br>
+      <img [src]="image" alt="" height="">
+
+  </form>
+</ion-content>
